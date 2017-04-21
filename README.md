@@ -1,2 +1,2 @@
 # mca39.github.io
-CIT 230 coursework
+This site is for learning HTML5, CSS3, and JavaScript for a frontend Web Development test.
