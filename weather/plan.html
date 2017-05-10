@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<title>Weather | Page Plan</title>
+		<meta name="description" content="This is a plan to for a weather page">
+		<meta name="viewport" content="width=device-width">
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<header>Weather App Site Plan</header>
+
+			<nav>
+				<a href="#">Home</a>
+			</nav>
+
+			<main>
+				<h1>Mobile Weather App Site Plan</h1>
+
+				<h2>Purpose</h2>
+				<p>
+					The client would like a web based weather app created. The purpose of the site is to give current weather conditions in 3 different ways.  The initial landing page will give the weather for the current location based on the Geocoding information given by the browser.  The second is weather for 3 specific locations accessible through a dedicated link, and the third is weather for any location determined by a search string.
+				</p>
+				<br>
+
+				<h2>Audience</h2>
+				<p>
+					Primary audience is adults ages 18-30.  Most will be students.  Access to the site will be split between mobile devices and laptops.
+				</p>
+				<br>
+
+				<h3>Audience Goals: </h3>
+				<p>
+					College students move around quite a bit so one goal would be to quickly get the weather conditions for their current location as they head off to class or study. They are also often far from their homes so the ability to quickly get the conditions for a specific location is important as well.  The third goal deals with planning for travels...the ability to get weather conditions for any location will help with last minute packing for road trips.
+				</p>
+				<br>
+
+				<h3>Personas</h3>
+				<img src="images/cool-joe.jpg" alt="Joe Cool">
+				<ul>
+					<li>
+						<strong>Name: </strong>Joe Cool
+					</li>
+					<li>
+						<strong>Occupation: </strong>student
+					</li>
+					<li>
+						<strong>Age: </strong>undetermined
+					</li>
+					<li>
+						<strong>Interests: </strong>Traveling, seeing new things
+					</li>
+					<li>
+						<strong>Motivation: </strong>Joe is not into planning.  His last minute scrambling, whether it is getting to class in the morning or heading out on his latest adventure, has left him unprepared for weather conditions many times (He is tired of sleeping in the rain and snow).  He would like to be more prepared...without having to put much effort into it...or planning.
+					</li>
+					<li>
+						<strong>Environment: </strong>Joe is comfortable using laptops and Mobile devices, he will most often be found on a smart phone however.  Many of the places he frequents do not have great signal…he is often dealing with 3G speeds
+					</li>
+				</ul>
+
+					<img src="images/lucy.jpg" alt="Lucy">
+					<ul>
+						<li>
+							<strong>Name: </strong>Lucy van Pelt
+						</li>
+						<li>
+							<strong>Occupation: </strong>student
+						</li>
+						<li>
+							<strong>Age: </strong>18
+						</li>
+						<li>
+							<strong>Interests: </strong>Giving advice, Psychology
+						</li>
+						<li>
+							<strong>Motivation: </strong>Lucy is a no nonsense young lady who likes to help those around her.  She wants easy access to the weather conditions for many locations so that she can always be prepared to offer some unsolicited advice to her peers.
+						</li>
+						<li>
+							<strong>Environment: </strong>Lucy has a smart phone that she uses to keep her eye on her social media ‘friends’.  She is usually not very far from her trusty laptop however. Most of her time online is spent either on the University network or the apartment broadband.
+						</li>
+					</ul>
+
+				<h2>Content</h2>
+				<p>
+					All weather pages should include Location name, temperature, high, low, current weather descriptor, precipitation, and wind on small, and hourly temps should be added on larger screens. (See provided weather data file for more details)
+				</p>
+				<br>
+
+				<h3>Pages</h3>
+				<ol>
+					<li>
+						<strong>Home: </strong>weather for the current location. Current location should be determined by using the Geolocation API of the browser.  This information should be passed to the WeatherUnderground API  <a href ="https://www.wunderground.com/weather/api/">(https://www.wunderground.com/weather/api/)</a>) to retrieve the current conditions.
+					</li>
+
+					<li>
+						<strong>Franklin, Greenville, Springfield: </strong>weather for each specific location. The weather for The Franklin and Greenville pages should be pulled from a local JSON file that will be provided.
+					</li>
+
+					<li>
+						<strong>Search: </strong>Begins with only a search box, characters entered will cause a list of suggested matches to appear.  Selected location will pull up the weather. The search term from the field should be sent to the <a href ="https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1">WeatherUnderground autocomplete API </a>(https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1), and the results used to pull the current conditions for the selected location.
+					</li>
+				</ol>
+				<br>
+
+				<h2>Styles</h2>
+				<br>
+				<h3>Branding</h3>
+				<p>
+					The client provided the following initial concept for a name and logo: (You recognize that this logo could easily be re-created entirely with CSS using the right font and HTML entities… &#9856;  &#9861;)
+				</p>
+				<img src="images/logo-blue.jpg" alt="Feeling Lucky?">
+				<br>
+
+				<h3>Typography</h3>
+				<p>The client also expressed interest in the following fonts:</p>
+				<br>
+				<p><strong>Heading Font: </strong><a href="https://fonts.google.com/specimen/Sansita">Sansita</a> From Google Fonts</p>
+				<img src="images/helvetica-alphabet.png" alt="Helvetica Alphabet">
+
+				<h3>Colors</h3>
+				<table style="width:5%">
+					<tr>
+						<th><img src="images/primary-swatch.png" alt="Primary swatch light blue"></th>
+						<th><img src="images/secondary-swatch.png" alt="Secondary swatch salmon"></th>
+						<th><img src="images/accent1-swatch.png" alt="Accent swatch 1 yellow"></th>
+						<th><img src="images/accent2-swatch.png" alt="Accent swatch 2 navy blue"></th>
+					</tr>
+					<tr>
+						<th>Primary: #A6D8DB</th>
+						<th>Secondary: #F07C6C</th>
+						<th>Accent1: #E7EF61</th>
+						<th>Accent2: #47556F</th>
+					</tr>
+				</table>
+				<br>
+
+				<h3>Elements</h3>
+				<p>
+					(add usability note on each element)
+				</p>
+				<strong>Navigation</strong>
+				<br>
+				<img src="images/nav-bar.jpg" alt="Navigation Bar">
+				<p><u>Link:normal : #4A4653</u></p>
+				<p><u>Link:visited : #4A4653</u></p>
+				<p><u>Link:hover :  #E7EF61</u></p>
+				<p><u>Link:active :  #A6D8DB</u></p>
+				<br>
+
+				<strong>Opaque rounded content box:</strong>
+				<img src="images/rounded-example.jpg" alt="Rounded example image">
+				<p>background-color: rgba(200,200,200,.6);</p>
+				<p>margin: .2em auto;</p>
+				<p>border: 1px solid;</p>
+				<p>border-radius: 5px;</p>
+				<br>
+
+				<h2>Wireframes</h2>
+				<br>
+				<h3>Small Screen</h3>
+				<img src="images/wireframe-sm.png" alt="Small wireframe">
+				<br>
+				<h3>Large Screen</h3>
+				<img src="images/wireframe-lg.jpg" alt="Large wireframe">
+			</main>
+
+			<footer>
+				&copy;2017 Mariah Ashley
+			</footer>
+		</div>
+	</body>
+
+</html>
