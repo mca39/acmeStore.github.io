@@ -1,0 +1,108 @@
+/* This is  my main CSS file */
+* {
+	box-sizing: border-box; /* changes width property
+	to total width instead of content width */
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+	display: block; /* just in case we have
+	any older browsers that don't recognize
+	the HTML5 semantic elements */
+}
+
+body {
+	margin: 0; /* remove any margin from body */
+	padding: 0; /* ditto for padding */
+	background-color: salmon;
+	padding-bottom: 20px;
+}
+
+main {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+nav ul{
+	display: flex;
+}
+
+nav li {
+	padding-right: 5%;
+	list-style-type: none;
+}
+
+nav li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.title h1 {
+	text-align: right;
+	margin-top: -.2em;
+}
+
+.overview h2{
+	margin-top: -.3em;
+}
+
+.curr_conditions h2{
+	margin-top: -.3em;
+}
+
+.curr_conditions ul{
+	list-style-type: none;
+}
+
+.curr_conditions {
+	width: 50%;
+	height: 100;
+}
+
+#wind{
+	width: 25%;
+	float: left;
+}
+
+#windInfo{
+	width: 55%;
+	float: left;
+	padding-left: 25px;
+}
+
+#precip{
+	width: 55%;
+	float: left;
+}
+
+#precipInfo{
+	width: 32%;
+	float: left;
+	margin-left: -35px;
+	margin-top: 5px;
+}
+
+
+.hourly{
+	visibility: hidden;
+	display: none;
+}
+
+
+
+
