@@ -19,10 +19,15 @@ figure {
 	the HTML5 semantic elements */
 }
 
+.title{
+	background-color: #A6D8DB; /*same color in the feeling lucky image*/
+	padding-bottom: .05px;
+}
+
 body {
 	margin: 0; /* remove any margin from body */
 	padding: 0; /* ditto for padding */
-	background-color: salmon;
+
 	padding-bottom: 20px;
 }
 
@@ -30,7 +35,7 @@ main {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
-	background-image: url("images/sunny-winter.jpg");
+	background-image: url("/weather/images/sunny-winter.jpg");
 	background-size: cover;
 }
 
@@ -56,6 +61,7 @@ nav {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	background-color: salmon;
 }
 
 nav a:link {
@@ -69,7 +75,7 @@ nav a:link {
 }
 
 .overview h2{
-	margin-top: -.3em;
+	margin-top: -.1em;
 }
 
 .curr_conditions h2{
