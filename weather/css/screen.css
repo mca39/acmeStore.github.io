@@ -38,16 +38,19 @@ nav ul{
 	display: flex;
 }
 
+/*Add space between links on the nav bar*/
 nav li {
 	padding-right: 5%;
 	list-style-type: none;
 }
 
+/*The last link on the nav bar doesn't need extra space to the right*/
 nav li:last-child {
 	margin-right: 0;
 	padding-right: 0;
 }
 
+/*Move the nav bar to the bottom in a fixed position*/
 nav {
 	position: fixed;
 	bottom: 0;
@@ -101,10 +104,11 @@ nav a:link {
 #precipInfo{
 	width: 32%;
 	float: left;
-	margin-left: -35px;
-	margin-top: 5px;
+	margin-left: -35px; /*Info was positioned to far to the right*/
+	margin-top: 5px; /*This fixes the alignment, info was a little to high*/
 }
 
+/*We don't need to view the hourly conditions on the small frame*/
 .hourly{
 	visibility: hidden;
 	display: none;
