@@ -1,4 +1,5 @@
 /* This is  my main CSS file */
+@import url('https://fonts.googleapis.com/css?family=Sansita');
 * {
 	box-sizing: border-box; /* changes width property
 	to total width instead of content width */
@@ -29,6 +30,8 @@ main {
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	background-image: url("images/sunny-winter.jpg");
+	background-size: cover;
 }
 
 nav ul{
@@ -50,6 +53,11 @@ nav {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+nav a:link {
+	text-decoration: none;
+	color: #47556F;
 }
 
 .title h1 {
@@ -97,12 +105,18 @@ nav {
 	margin-top: 5px;
 }
 
-
 .hourly{
 	visibility: hidden;
 	display: none;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Sansita, "second choice", generic-family;
+}
 
 
