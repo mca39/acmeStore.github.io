@@ -1,7 +1,9 @@
 /* This is  my main CSS file */
+
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 * {
-	box-sizing: border-box; /* changes width property
+	box-sizing: border-box;
+	/* changes width property
 	to total width instead of content width */
 }
 
@@ -14,20 +16,24 @@ section,
 main,
 figcaption,
 figure {
-	display: block; /* just in case we have
+	display: block;
+	/* just in case we have
 	any older browsers that don't recognize
 	the HTML5 semantic elements */
 }
 
-.title{
-	background-color: #A6D8DB; /*same color in the feeling lucky image*/
+.title {
+	background-color: #b0d7dc;
+	/*same color in the feeling lucky image*/
 	padding-bottom: .05px;
 }
 
 body {
-	margin: 0; /* remove any margin from body */
-	padding: 0; /* ditto for padding */
-
+	margin: 0;
+	/* remove any margin from body */
+	padding: 0;
+	/* ditto for padding */
+	font-size: 20px;
 	padding-bottom: 20px;
 }
 
@@ -39,23 +45,29 @@ main {
 	background-size: cover;
 }
 
-nav ul{
+nav ul {
 	display: flex;
 }
 
+
 /*Add space between links on the nav bar*/
+
 nav li {
 	padding-right: 5%;
 	list-style-type: none;
 }
 
+
 /*The last link on the nav bar doesn't need extra space to the right*/
+
 nav li:last-child {
 	margin-right: 0;
 	padding-right: 0;
 }
 
+
 /*Move the nav bar to the bottom in a fixed position*/
+
 nav {
 	position: fixed;
 	bottom: 0;
@@ -64,69 +76,127 @@ nav {
 	background-color: salmon;
 }
 
+
+/*unvisited link*/
+
 nav a:link {
 	text-decoration: none;
 	color: #47556F;
 }
 
+/*links that have been visited should look the same*/
+nav a:visited{
+	text-decoration: none;
+	color: #47556F;
+}
+
+/*hover over link yellow and underlined*/
+nav a:hover {
+	color: #E7EF61;
+	text-decoration:underline;
+}
+
+/*click on the link change color and underline*/
+nav a:active{
+	color: #A6D8DB;
+	text-decoration:underline;
+}
+
+/*positons the title "Local Weather*/
 .title h1 {
 	text-align: right;
 	margin-top: -.2em;
 }
 
-.overview h2{
+.overview {
+	background-color: rgba(200, 200, 200, .6);
+	margin: .2em auto;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+/*reduces space above the location*/
+.overview h2 {
 	margin-top: -.1em;
 }
 
-.curr_conditions h2{
+.curr_conditions {
+	background-color: rgba(200, 200, 200, .6);
+	margin: .2em auto;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+/*reduces the space above the heading "Current Conditions"*/
+.curr_conditions h2 {
 	margin-top: -.3em;
 }
 
-.curr_conditions ul{
+.curr_conditions ul {
 	list-style-type: none;
+	color: #083045;
 }
 
+/*set the width and height of the current conditions box*/
 .curr_conditions {
-	width: 50%;
+	width: 52%;
 	height: 100;
 }
 
-#wind{
+/*corrects alignment of the heading "Wind:"*/
+.curr_conditions h3{
+	margin-top: .8em;
+}
+
+/*positions the heading "Wind"*/
+#wind {
 	width: 25%;
 	float: left;
 }
 
-#windInfo{
+/*positions and aligns wind information*/
+#windInfo {
 	width: 55%;
 	float: left;
-	padding-left: 25px;
+	padding-left: 1.8em;
 }
 
-#precip{
+/*positions and aligns the heading "Precipitation"*/
+#precip {
 	width: 55%;
 	float: left;
 }
 
-#precipInfo{
+/*positions and aligns precipitation information*/
+#precipInfo {
 	width: 32%;
 	float: left;
-	margin-left: -35px; /*Info was positioned to far to the right*/
-	margin-top: 5px; /*This fixes the alignment, info was a little to high*/
+	margin-left: -35px;
+	/*Info was positioned to far to the right*/
+	margin-top: 5px;
+	/*This fixes the alignment, info was a little to high*/
 }
 
+
 /*We don't need to view the hourly conditions on the small frame*/
-.hourly{
+.hourly {
 	visibility: hidden;
 	display: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: Sansita, "second choice", generic-family;
+footer {
+	background-color: #b0d7dc;
+	padding-bottom: 1.5em;
+	margin-bottom: 0;
 }
 
 
+.main h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+	font-family: Sansita, "second choice", generic-family;
+	color: #083045;
+}
