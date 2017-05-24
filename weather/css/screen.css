@@ -22,6 +22,10 @@ figure {
 	the HTML5 semantic elements */
 }
 
+img {
+	max-width: 100%;
+}
+
 .title {
 	background-color: #b0d7dc;
 	/*same color in the feeling lucky image*/
@@ -50,22 +54,6 @@ nav ul {
 }
 
 
-/*Add space between links on the nav bar*/
-
-nav li {
-	padding-right: 5%;
-	list-style-type: none;
-}
-
-
-/*The last link on the nav bar doesn't need extra space to the right*/
-
-nav li:last-child {
-	margin-right: 0;
-	padding-right: 0;
-}
-
-
 /*Move the nav bar to the bottom in a fixed position*/
 
 nav {
@@ -77,32 +65,57 @@ nav {
 }
 
 
-/*unvisited link*/
+/*Add space between links on the nav bar*/
 
+nav li {
+	padding-right: 1.05em;
+	list-style-type: none;
+}
+
+/*reduce space on the nav bar in front of the home link*/
+nav li:first-child{
+	margin-left: -.8em;
+}
+
+/*The last link on the nav bar doesn't need extra space to the right*/
+nav li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+/*unvisited link*/
 nav a:link {
 	text-decoration: none;
 	color: #47556F;
 }
 
+
 /*links that have been visited should look the same*/
-nav a:visited{
+
+nav a:visited {
 	text-decoration: none;
 	color: #47556F;
 }
 
+
 /*hover over link yellow and underlined*/
+
 nav a:hover {
 	color: #E7EF61;
-	text-decoration:underline;
+	text-decoration: underline;
 }
+
 
 /*click on the link change color and underline*/
-nav a:active{
+
+nav a:active {
 	color: #A6D8DB;
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
+
 /*positons the title "Local Weather*/
+
 .title h1 {
 	text-align: right;
 	margin-top: -.2em;
@@ -113,11 +126,26 @@ nav a:active{
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 5px;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
+
+.overview p {
+	display: flex;
+	justify-content: space-between;
+}
+
+.overview .temp {
+	font-size: 3.5em;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 
 /*reduces space above the location*/
 .overview h2 {
-	margin-top: -.1em;
+	margin-top: .1em;
 }
 
 .curr_conditions {
@@ -125,11 +153,17 @@ nav a:active{
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 5px;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
 }
 
-/*reduces the space above the heading "Current Conditions"*/
+
+/*font size for the heading "Current Conditions"*/
 .curr_conditions h2 {
-	margin-top: -.3em;
+	font-size: 1.4em;
+	padding-top: -1em;
+	padding-left: 1.5em;
+	margin-top: .5em;
 }
 
 .curr_conditions ul {
@@ -137,66 +171,82 @@ nav a:active{
 	color: #083045;
 }
 
+
 /*set the width and height of the current conditions box*/
+
 .curr_conditions {
-	width: 52%;
+	width: 85%;
 	height: 100;
 }
 
-/*corrects alignment of the heading "Wind:"*/
-.curr_conditions h3{
-	margin-top: .8em;
-}
 
-/*positions the heading "Wind"*/
-#wind {
-	width: 25%;
+/*positions the heading "Wind:"*/
+
+.curr_conditions #wind {
+	margin-top: 0;
+	width: 20%;
 	float: left;
 }
+
 
 /*positions and aligns wind information*/
-#windInfo {
-	width: 55%;
+
+.curr_conditions #windInfo {
+	width: 80%;
 	float: left;
-	padding-left: 1.8em;
+	padding-left: 5em;
+	margin-top: 0;
 }
+
+
+/*creates a clear space between the 2 wind divs and the 2 precip divs*/
+
+.curr_conditions .clear {
+	clear: both;
+	height: 0;
+	width : 0;
+}
+
 
 /*positions and aligns the heading "Precipitation"*/
-#precip {
-	width: 55%;
-	float: left;
+
+.curr_conditions #precip {
+ width: 80%;
+ float: left;
+ padding-left: 0;
+ margin-left: -2em;
 }
 
+
 /*positions and aligns precipitation information*/
-#precipInfo {
-	width: 32%;
+
+.curr_conditions #precipInfo {
 	float: left;
-	margin-left: -35px;
-	/*Info was positioned to far to the right*/
-	margin-top: 5px;
-	/*This fixes the alignment, info was a little to high*/
+	width: 20%;
+	margin-top: .5em;
+	padding: 0;
 }
 
 
 /*We don't need to view the hourly conditions on the small frame*/
-.hourly {
-	visibility: hidden;
+
+.hourly,
+.sunny {
 	display: none;
 }
 
 footer {
 	background-color: #b0d7dc;
-	padding-bottom: 1.5em;
-	margin-bottom: 0;
+	line-height: 2.8em;
+	margin-bottom: 1em;
 }
 
-
 .main h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: Sansita, "second choice", generic-family;
 	color: #083045;
 }
