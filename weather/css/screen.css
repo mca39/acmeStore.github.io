@@ -51,8 +51,9 @@ main {
 
 nav ul {
 	display: flex;
+	justify-content: space-around;
+	padding: 0;
 }
-
 
 /*Move the nav bar to the bottom in a fixed position*/
 
@@ -68,13 +69,7 @@ nav {
 /*Add space between links on the nav bar*/
 
 nav li {
-	padding-right: 1.05em;
 	list-style-type: none;
-}
-
-/*reduce space on the nav bar in front of the home link*/
-nav li:first-child{
-	margin-left: -.8em;
 }
 
 /*The last link on the nav bar doesn't need extra space to the right*/
@@ -176,7 +171,6 @@ nav a:active {
 
 .curr_conditions {
 	width: 85%;
-	height: 100;
 }
 
 
@@ -194,7 +188,7 @@ nav a:active {
 .curr_conditions #windInfo {
 	width: 80%;
 	float: left;
-	padding-left: 5em;
+	padding-left: 2.1em;
 	margin-top: 0;
 }
 
@@ -211,9 +205,9 @@ nav a:active {
 /*positions and aligns the heading "Precipitation"*/
 
 .curr_conditions #precip {
+ display: flex;
  width: 80%;
  float: left;
- padding-left: 0;
  margin-left: -2em;
 }
 
@@ -221,10 +215,10 @@ nav a:active {
 /*positions and aligns precipitation information*/
 
 .curr_conditions #precipInfo {
+	display: flex;
 	float: left;
 	width: 20%;
-	margin-top: .5em;
-	padding: 0;
+
 }
 
 
@@ -238,7 +232,7 @@ nav a:active {
 footer {
 	background-color: #b0d7dc;
 	line-height: 2.8em;
-	margin-bottom: 1em;
+	margin-bottom: 2em;
 }
 
 .main h1,
