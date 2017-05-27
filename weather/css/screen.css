@@ -7,240 +7,422 @@
 	to total width instead of content width */
 }
 
-article,
-aside,
-footer,
-header,
-nav,
-section,
-main,
-figcaption,
-figure {
-	display: block;
-	/* just in case we have
+
+/*for desktops/laptops*/
+
+@media only screen and (min-device-width: 481px) {
+	article,
+	aside,
+	footer,
+	header,
+	nav,
+	section,
+	main,
+	figcaption,
+	figure {
+		display: block;
+		/* just in case we have
+		any older browsers that don't recognize
+		the HTML5 semantic elements */
+	}
+	img {
+		max-width: 100%;
+	}
+	.title {
+		background-color: #b0d7dc;
+		/*same color in the feeling lucky image*/
+		padding-bottom: .05px;
+	}
+	body {
+		margin: 0;
+		/* remove any margin from body */
+		padding: 0;
+		/* ditto for padding */
+		font-size: 20px;
+		padding-bottom: 0;
+	}
+	main {
+		display: flex;
+		flex-flow: wrap;
+		align-items: center;
+		background-color: rgba(200, 200, 200, .6);
+		padding-bottom: 1.5%;
+		align-items: baseline;
+	}
+	/*positons the title "Local Weather*/
+	.title h1 {
+		display: flex;
+		align-self: flex-start;
+		margin-left: 4.5em;
+		margin-top: 0;
+	}
+	/*Move the nav bar to the bottom in a fixed position*/
+	nav {
+		display: inline;
+		align-self: flex-start;
+		align-items: center;
+		width: 100%;
+		background-color: salmon;
+	}
+	/*Add space between links on the nav bar*/
+	nav ul {
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+	}
+	/*unvisited link*/
+	nav a:link {
+		text-decoration: none;
+		color: #47556F;
+	}
+	/*links that have been visited should look the same*/
+	nav a:visited {
+		text-decoration: none;
+		color: #47556F;
+	}
+	/*hover over link yellow and underlined*/
+	nav a:hover {
+		color: #E7EF61;
+		text-decoration: underline;
+	}
+	/*click on the link change color and underline*/
+	nav a:active {
+		color: #A6D8DB;
+		text-decoration: underline;
+	}
+	/*opaque box behind the overview section*/
+	.overview {
+		display: flex;
+		flex-direction: column;
+		order: 2;
+		text-align: center;
+		justify-content: space-around;
+		padding: 1em;
+	}
+
+	.overview:nth-of-type(1) {
+		flex-grow: 2;
+	}
+
+	/*positions the sunny symbol and high/low*/
+	.overview p {
+		display: flex;
+		justify-content: space-between;
+	}
+	/*positions the temperature and sets temperature font size to be very large*/
+	.overview .temp {
+		font-size: 3.5em;
+		padding: 0;
+		margin: 0;
+	}
+	.overview #temp_wrapper {
+		text-align: center;
+		margin: .2em auto;
+		border: 1px solid;
+		border-radius: 5px;
+		background-image: url("/weather/images/sunny-winter.jpg");
+		background-size: cover;
+		width: 70%;
+		height: 0;
+		padding-bottom: 70%;
+	}
+	.overview p {
+		color: #083045;
+	}
+	/*reduces space above the location*/
+	.overview h2 {
+		padding-bottom: 1em;
+		margin: 0;
+	}
+	/*position the items in the current conditions section to the left of overview*/
+	.curr_conditions {
+		display: flex;
+		order: 1;
+		flex-wrap: wrap;
+		width: 33%;
+		flex-direction: row;
+		align-items: baseline;
+		width: 33%;
+		height: 100%;
+	}
+
+	.curr_conditions:nth-of-type(2) {
+		flex-grow: 1;
+	}
+
+	.curr_conditions h2 {
+		width: 100%;
+		text-align: center;
+	}
+
+	.curr_conditions #wind,
+	#precip {
+		width: 50%;
+		text-align: right;
+		padding-right: 1.5em;
+	}
+
+	.curr_conditions #windInfo,
+	#precipInfo {
+		width: 50%;
+		text-align: left;
+	}
+
+	/*styles and decreases space around the wind information*/
+	.curr_conditions ul {
+		list-style-type: none;
+		color: #083045;
+		padding: 0;
+		margin: 0;
+	}
+	/*font color for the precipitation info*/
+	.curr_conditions #precipInfo {
+		color: #083045;
+	}
+	.hourly {
+		display: flex;
+		order: 3;
+		flex-wrap: wrap;
+		width: 33%;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: baseline;
+		width: 33%;
+	}
+
+	.hourly:nth-of-type(3) {
+		flex-grow: 1;
+	}
+
+	.hourly h2 {
+		width: 100%;
+		flex-direction: column;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.hourly ul {
+		list-style-type: none;
+		justify-content: flex-start;
+		margin-left: -3em;
+		padding-left: 0;
+	}
+
+	.hourly li{
+		padding-bottom: .5em;
+	}
+	/*footer has the same background color as the header at the top of the page*/
+	footer {
+		background-color: #b0d7dc;
+		line-height: 2.8em;
+		flex-grow: 1;
+	}
+	/*set font for all headings*/
+	.main h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: Sansita, "second choice", generic-family;
+		color: #083045;
+	}
+}
+
+
+/**********************************************/
+
+
+/*for mobile devices*/
+
+@media only screen and (max-device-width: 480px) {
+	article,
+	aside,
+	footer,
+	header,
+	nav,
+	section,
+	main,
+	figcaption,
+	figure {
+		display: block;
+		/* just in case we have
 	any older browsers that don't recognize
 	the HTML5 semantic elements */
-}
+	}
+	img {
+		max-width: 100%;
+	}
+	.title {
+		background-color: #b0d7dc;
+		/*same color in the feeling lucky image*/
+		padding-bottom: .05px;
+	}
+	body {
+		margin: 0;
+		/* remove any margin from body */
+		padding: 0;
+		/* ditto for padding */
+		font-size: 20px;
+		height: 100%;
+	}
+	main {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		background-image: url("/weather/images/sunny-winter.jpg");
+		background-size: cover;
+		flex-grow: 1;
+	}
 
-img {
-	max-width: 100%;
-}
+	nav ul {
+		display: flex;
+		justify-content: space-around;
+		padding: 0;
+	}
+	/*Move the nav bar to the bottom in a fixed position*/
+	nav {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: salmon;
+	}
+	/*don't need a link to home here*/
+	nav li:first-child{
+		display: none;
+	}
+	/*Add space between links on the nav bar*/
+	nav li {
+		list-style-type: none;
+	}
+	/*The last link on the nav bar doesn't need extra space to the right*/
+	nav li:last-child {
+		margin-right: 0;
+		padding-right: 0;
+	}
+	/*unvisited link*/
+	nav a:link {
+		text-decoration: none;
+		color: #47556F;
+	}
+	/*links that have been visited should look the same*/
+	nav a:visited {
+		text-decoration: none;
+		color: #47556F;
+	}
+	/*hover over link yellow and underlined*/
+	nav a:hover {
+		color: #E7EF61;
+		text-decoration: underline;
+	}
+	/*click on the link change color and underline*/
+	nav a:active {
+		color: #A6D8DB;
+		text-decoration: underline;
+	}
+	/*positons the title "Local Weather*/
+	.title h1 {
+		text-align: right;
+		margin-top: -.2em;
+		margin-bottom: .5em;
+	}
+	/*opaque box behind the overview section*/
+	.overview {
+		background-color: rgba(200, 200, 200, .6);
+		margin: .2em auto;
+		border: 1px solid;
+		border-radius: 5px;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		padding-top: 0;
+		flex-grow: 1;
+	}
+	/*positions the sunny symbol and high/low*/
+	.overview p {
+		display: flex;
+		justify-content: space-between;
+	}
+	/*positions the temperature and sets temperature font size to be very large*/
+	.overview .temp {
+		font-size: 3.5em;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	/*reduces space above the location*/
+	.overview h2 {
+		margin: 0;
+		padding: 0;
+	}
+	/*opaque box behind current conditions*/
+	.curr_conditions {
+		display: flex;
+		background-color: rgba(200, 200, 200, .6);
+		margin: .2em auto;
+		border: 1px solid;
+		border-radius: 5px;
+		padding-right: 1.5em;
+		padding-left: 1.5em;
+		width: 80%;
+		/*position items*/
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: baseline;
+		flex-grow: 1;
+	}
+	/*decreases space around the h2 headings in current conditions section*/
+	.curr_conditions h2 {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	/*styles and decreases space around the wind information*/
+	.curr_conditions ul {
+		list-style-type: none;
+		color: #083045;
+		padding: 0;
+		margin: 0;
+	}
 
-.title {
-	background-color: #b0d7dc;
-	/*same color in the feeling lucky image*/
-	padding-bottom: .05px;
-}
+	.curr_conditions #wind, #precip{
+		width: 50%;
+		text-align: right;
+	}
 
-body {
-	margin: 0;
-	/* remove any margin from body */
-	padding: 0;
-	/* ditto for padding */
-	font-size: 20px;
-	padding-bottom: 20px;
-}
-
-main {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	background-image: url("/weather/images/sunny-winter.jpg");
-	background-size: cover;
-}
-
-nav ul {
-	display: flex;
-	justify-content: space-around;
-	padding: 0;
-}
-
-/*Move the nav bar to the bottom in a fixed position*/
-
-nav {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: salmon;
-}
-
-
-/*Add space between links on the nav bar*/
-
-nav li {
-	list-style-type: none;
-}
-
-/*The last link on the nav bar doesn't need extra space to the right*/
-nav li:last-child {
-	margin-right: 0;
-	padding-right: 0;
-}
-
-/*unvisited link*/
-nav a:link {
-	text-decoration: none;
-	color: #47556F;
-}
-
-
-/*links that have been visited should look the same*/
-
-nav a:visited {
-	text-decoration: none;
-	color: #47556F;
-}
-
-
-/*hover over link yellow and underlined*/
-
-nav a:hover {
-	color: #E7EF61;
-	text-decoration: underline;
-}
-
-
-/*click on the link change color and underline*/
-
-nav a:active {
-	color: #A6D8DB;
-	text-decoration: underline;
-}
-
-
-/*positons the title "Local Weather*/
-
-.title h1 {
-	text-align: right;
-	margin-top: -.2em;
-}
-
-.overview {
-	background-color: rgba(200, 200, 200, .6);
-	margin: .2em auto;
-	border: 1px solid;
-	border-radius: 5px;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-}
-
-.overview p {
-	display: flex;
-	justify-content: space-between;
-}
-
-.overview .temp {
-	font-size: 3.5em;
-	text-align: center;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-
-/*reduces space above the location*/
-.overview h2 {
-	margin-top: .1em;
-}
-
-.curr_conditions {
-	background-color: rgba(200, 200, 200, .6);
-	margin: .2em auto;
-	border: 1px solid;
-	border-radius: 5px;
-	padding-right: 2.5em;
-	padding-left: 2.5em;
-}
-
-
-/*font size for the heading "Current Conditions"*/
-.curr_conditions h2 {
-	font-size: 1.4em;
-	padding-top: -1em;
-	padding-left: 1.5em;
-	margin-top: .5em;
-}
-
-.curr_conditions ul {
-	list-style-type: none;
-	color: #083045;
-}
-
-
-/*set the width and height of the current conditions box*/
-
-.curr_conditions {
-	width: 85%;
-}
-
-
-/*positions the heading "Wind:"*/
-
-.curr_conditions #wind {
-	margin-top: 0;
-	width: 20%;
-	float: left;
-}
-
-
-/*positions and aligns wind information*/
-
-.curr_conditions #windInfo {
-	width: 80%;
-	float: left;
-	padding-left: 2.1em;
-	margin-top: 0;
-}
-
-
-/*creates a clear space between the 2 wind divs and the 2 precip divs*/
-
-.curr_conditions .clear {
-	clear: both;
-	height: 0;
-	width : 0;
-}
-
-
-/*positions and aligns the heading "Precipitation"*/
-
-.curr_conditions #precip {
- display: flex;
- width: 80%;
- float: left;
- margin-left: -2em;
-}
-
-
-/*positions and aligns precipitation information*/
-
-.curr_conditions #precipInfo {
-	display: flex;
-	float: left;
-	width: 20%;
-
-}
-
-
-/*We don't need to view the hourly conditions on the small frame*/
-
-.hourly,
-.sunny {
-	display: none;
-}
-
-footer {
-	background-color: #b0d7dc;
-	line-height: 2.8em;
-	margin-bottom: 2em;
-}
-
-.main h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: Sansita, "second choice", generic-family;
-	color: #083045;
+	.curr_conditions #windInfo, #precipInfo{
+		width: 50%;
+		text-align: left;
+		padding-left: 1.6em;
+	}
+	/*font color for the precipitation info*/
+	.curr_conditions #precipInfo {
+		color: #083045;
+	}
+	/*We don't need to view the hourly conditions on the small frame*/
+	.hourly,
+	.sunny {
+		display: none;
+	}
+	/*footer has the same background color as the header at the top of the page*/
+	footer {
+		display: flex;
+		background-color: #b0d7dc;
+		line-height: 2.8em;
+		flex-grow: 1;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	/*set font for all headings*/
+	.main h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: Sansita, "second choice", generic-family;
+		color: #083045;
+	}
 }
