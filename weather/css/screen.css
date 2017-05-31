@@ -46,7 +46,7 @@
 		flex-flow: wrap;
 		align-items: center;
 		background-color: rgba(200, 200, 200, .6);
-		padding-bottom: 1.5%;
+		padding-bottom: .5%;
 		align-items: baseline;
 	}
 	/*positons the title "Local Weather*/
@@ -351,11 +351,13 @@
 		margin: 0;
 		padding: 0;
 	}
+
 	/*reduces space above the location*/
 	.overview h2 {
 		margin: 0;
 		padding: 0;
 	}
+
 	/*opaque box behind current conditions*/
 	.curr_conditions {
 		display: flex;
