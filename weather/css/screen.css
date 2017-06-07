@@ -44,8 +44,13 @@ body {
 	height: 100%;
 }
 
-main.franklin .overview{background-image:url("/weather/images/sunny-winter.jpg");}
-main.greenville .overview{background-image:url("/weather/images/thunderstorm.jpg");}
+main.franklin .overview {
+	background-image: url("/weather/images/sunny-winter.jpg");
+}
+
+main.greenville .overview {
+	background-image: url("/weather/images/thunderstorm.jpg");
+}
 
 main {
 	display: flex;
@@ -138,6 +143,7 @@ nav a:active {
 
 
 /*opaque box behind the overview section*/
+
 .overview {
 	background-color: rgba(200, 200, 200, .6);
 	margin: .2em auto;
@@ -210,6 +216,7 @@ nav a:active {
 	text-align: center;
 }
 
+
 /*Set the direction and width for .wind and #windInfo*/
 
 .wind_wrapper {
@@ -231,6 +238,7 @@ nav a:active {
 	justify-content: flex-start;
 	width: 50%;
 }
+
 
 /*Set the direction and width  for .precip and #precipInfo*/
 
@@ -255,11 +263,13 @@ nav a:active {
 	width: 25%;
 }
 
+
 /*font color for the precipitation info*/
 
 .curr_conditions #precipInfo {
 	color: #083045;
 }
+
 
 /*We don't need to view the hourly conditions on the small frame*/
 
@@ -267,6 +277,7 @@ nav a:active {
 .sunny {
 	display: none;
 }
+
 
 /*footer has the same background color as the header at the top of the page*/
 
@@ -305,7 +316,7 @@ h6 {
 		align-items: center;
 		background-color: rgba(200, 200, 200, .6);
 		background-image: none;
-		align-items: stretch;
+		align-items: stretch;/*makes the blocks for main the same height*/
 	}
 	/*positons the title "Local Weather*/
 	.title h1 {
@@ -318,8 +329,10 @@ h6 {
 	nav {
 		position: relative;
 		justify-content: center;
-		width: 100%;
+		width: 100%; /*without this the nav moves to the left and rearranges blocks*/
 	}
+
+	/*unhides the home link*/
 	nav li:first-child {
 		display: inline-flex;
 	}
@@ -345,18 +358,14 @@ h6 {
 		padding-right: 1.5em;
 		padding-top: 0;
 	}
-
 	.overview p {
 		color: #083045;
 	}
-
-	.thunder{
+	.thunder {
 		text-align: center;
-		color:floralwhite
+		color: floralwhite
 	}
-
 	/*reduces space above the location and adds image before h2*/
-
 	.overview h2 {
 		align-self: center;
 		padding-bottom: 1em;
@@ -397,7 +406,7 @@ h6 {
 		display: flex;
 		flex-direction: row;
 		align-items: baseline;
-		width: 38;
+		width: 38%;
 	}
 	.hourly {
 		display: flex;
