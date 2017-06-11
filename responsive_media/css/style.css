@@ -224,7 +224,7 @@ h1 {
 	/*	Background Images - Use with large screens */
 	.page-header {
 		background-image: url(../images/nps-logo_150.png), url(../images/looking_down_1270.jpg);
-		background-position: right top, left cover;
+		background-position: right top, top left;
 	}
 	.page-nav li {
 		flex: 0 1 10%;
