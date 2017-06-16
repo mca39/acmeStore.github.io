@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Spot the Symbol</title>
+	<link rel="stylesheet" href="css/spotthesymbol.css">
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script>
+		$(function () {
+			// This function calculates and returns the distance value
+			function calculateDistance(x, y) {
+				var symbolPositionX = 97;
+				var symbolPositionY = 106;
+				return Math.sqrt(((x - symbolPositionX) * (x - symbolPositionX)) + ((y - symbolPositionY) * (y - symbolPositionY)));
+			}
+
+			var statusDisplay = $('.status')
+
+			// Your jQuery Code goes here
+			$('.container').on({
+				mousemove: function(evt){
+					//finds mouse location
+					$('.coordinates').html(evt.offsetX + ',' + evt.offsetY);
+					var distance = calculateDistance(evt.offsetX, evt.offsetY);
+
+					if(distance > 30){
+						statusDisplay.html("You're too far off !!");
+					} else if( distance > 20 && distance < 30){
+						statusDisplay.html("You're close !");
+					} else if( distance > 10 && distance < 20){
+						statusDisplay.html("You're very close !");
+					} else if( distance > 8 && distance < 10){
+						statusDisplay.html("Almost there !");
+					} else if( distance >= 0 && distance < 8){
+						statusDisplay.html("Yay!!! You found the hand !! Now click !");
+					}
+				},
+				 click: function(evt){
+					 if(calculateDistance(evt.offsetX, evt.offsetY) < 8) {
+						 statusDisplay.html("Congratulations !! You won the game !");
+					 } else{
+						 statusDisplay.html("Oops !! You lost the game !");
+					 }
+					 //disable all event listeners
+					 $(this).off();
+				 },
+					mouseleave: function(){
+						statusDisplay.html("Find the hand !");
+						$('.coordinates').html("0, 0");
+					}
+			})
+
+		})
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="statusBar">
+			<h3 class="status">Find the Hand !</h3>
+			<h3 class="coordinates">0,0</h3>
+		</div>
+	</div>
+</body>
+
+</html>
