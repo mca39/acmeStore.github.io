@@ -21,8 +21,8 @@ figcaption,
 figure {
 	display: block;
 	/* just in case we have
-		any older browsers that don't recognize
-		the HTML5 semantic elements */
+	any older browsers that don't recognize
+	the HTML5 semantic elements */
 }
 
 img {
@@ -45,11 +45,12 @@ body {
 }
 
 main.franklin .overview {
-	background-image: url("/weather/images/sunny-winter.jpg");
+	background-image: url("../images/sunny-winter.jpg");
+
 }
 
 main.greenville .overview {
-	background-image: url("/weather/images/thunderstorm.jpg");
+	background-image: url("../images/thunderstorm.jpg");
 }
 
 main {
@@ -145,7 +146,6 @@ nav a:active {
 /*opaque box behind the overview section*/
 
 .overview {
-	background-color: rgba(200, 200, 200, .6);
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 5px;
@@ -316,7 +316,8 @@ h6 {
 		align-items: center;
 		background-color: rgba(200, 200, 200, .6);
 		background-image: none;
-		align-items: stretch;/*makes the blocks for main the same height*/
+		align-items: stretch;
+		/*makes the blocks for main the same height*/
 	}
 	/*positons the title "Local Weather*/
 	.title h1 {
@@ -329,9 +330,9 @@ h6 {
 	nav {
 		position: relative;
 		justify-content: center;
-		width: 100%; /*without this the nav moves to the left and rearranges blocks*/
+		width: 100%;
+		/*without this the nav moves to the left and rearranges blocks*/
 	}
-
 	/*unhides the home link*/
 	nav li:first-child {
 		display: inline-flex;
