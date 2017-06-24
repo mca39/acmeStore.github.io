@@ -46,7 +46,6 @@ body {
 
 main.franklin .overview {
 	background-image: url("../images/sunny-winter.jpg");
-
 }
 
 main.greenville .overview {
@@ -58,7 +57,7 @@ main {
 	flex-flow: column;
 	flex-wrap: nowrap;
 	align-items: center;
-	background-size: cover;
+	background-color: rgba(200, 200, 200, .6);
 	flex-grow: 1;
 }
 
@@ -185,89 +184,17 @@ nav a:active {
 /*opaque box behind current conditions*/
 
 .curr_conditions {
-	display: flex;
-	flex-direction: column;
+	/*	text-align-last: center;*/
 	/*opaque box around overview information*/
 	background-color: rgba(200, 200, 200, .6);
 	margin: .2em auto;
 	border: 1px solid;
 	border-radius: 5px;
 	width: 90%;
-	/*position content/items */
-	align-items: baseline;
-	flex-wrap: wrap;
-	flex-grow: 1;
 }
 
-
-/*no bullets*/
-
-.curr_conditions ul {
-	list-style-type: none;
-}
-
-
-/*position the h2 heading "Current Conditions*/
-
-.curr_conditions h2 {
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	text-align: center;
-}
-
-
-/*Set the direction and width for .wind and #windInfo*/
-
-.wind_wrapper {
-	display: flex;
-	flex-direction: row;
-	width: 80%;
-	align-items: baseline;
-	margin-bottom: -.8em;
-}
-
-.wind_wrapper #wind {
-	display: flex;
-	justify-content: flex-end;
-	width: 50%;
-}
-
-.wind_wrapper #windInfo {
-	display: flex;
-	justify-content: flex-start;
-	width: 50%;
-}
-
-
-/*Set the direction and width  for .precip and #precipInfo*/
-
-.precip_wrapper {
-	display: flex;
-	flex-direction: row;
-	width: 80%;
-	align-items: baseline;
-}
-
-.precip_wrapper #precip {
-	display: flex;
-	justify-content: flex-end;
-	width: 65%;
-	margin-top: -3em;
-	padding-right: 2em;
-}
-
-.precip_wrapper #precipInfo {
-	display: flex;
-	justify-content: flex-start;
-	width: 25%;
-}
-
-
-/*font color for the precipitation info*/
-
-.curr_conditions #precipInfo {
-	color: #083045;
+.curr_conditions p span {
+	padding: 2px 3px;
 }
 
 
