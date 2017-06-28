@@ -44,11 +44,11 @@ body {
 	height: 100%;
 }
 
-overview.franklin{
+.franklin .overview{
 	background-image: url("../images/sunny-winter.jpg");
 }
 
-overview.greenville{
+.greenville .overview{
 	background-image: url("../images/thunderstorm.jpg");
 }
 
@@ -325,13 +325,6 @@ h6 {
 		background-repeat: no-repeat;
 	}
 
-	.overview.franklin{
-		background-image: url("/weather/images/sunny-winter.jpg");
-	}
-
-	.overview.greenville{
-		background-image: url("/weather/images/thunderstorm.jpg");
-	}
 
 	/*format the overview section*/
 	.overview {
@@ -358,6 +351,13 @@ h6 {
 	.overview p {
 		color: #083045;
 	}
+
+	.sunny {
+		display: inline;
+		text-align: center;
+		color: floralwhite
+	}
+
 	.thunder {
 		text-align: center;
 		color: floralwhite
