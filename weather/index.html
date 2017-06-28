@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-us">
+
+	<head>
+		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen">
+		<meta charset="UTF-8">
+		<title>Current Location | Weather </title>
+		<meta name="description" content="Provides weather information for your current location.">
+		<meta name="viewport" content="width=device-width">
+		<script
+						src="https://code.jquery.com/jquery-3.2.1.min.js"
+						integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+						crossorigin="anonymous"></script>
+
+	</head>
+	<!-- *********************************************
+* Who Did You Collaborate With On This Assessment?
+* 1. Mariah  Ashley
+* 2. Carlos Barrera
+* 3. Ashley Offret
+* 4. Trevor Wayman
+* 5.Clarke Hawkinson
+* ******************************************** -->
+	<body>
+		<header>
+			<div class="title">
+				<img src="images/logo-blue.jpg" alt="Feeling Lucky Logo">
+				<h1>Local Weather</h1>
+			</div>
+		</header>
+
+		<main>
+			<nav>
+				<ul>
+					<li>
+						<a href="https://mca39.github.io/index.html" title="Go to home page">Home</a>
+					</li>
+					<li>
+						<a href="franklin.html" title="Go to the Franklin">Franklin</a></li>
+					<li>
+						<a href="greenville.html" title="Go to the Greenville">Greenville</a>
+					</li>
+					<li>
+						<a href="#" title="Go to the Springville">Springville</a>
+					</li>
+					<li>
+						<a href="#" title="Search Website Content">Search</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="weather-container">
+				<div id="cover">
+					<div id="status">Loading...</div>
+				</div>
+				<h1 id="cityDisplay"></h1>
+				<h2>Current Conditions</h2>
+				<ul id="current_conditions">
+					<li id="currentTemp"></li>
+					<li id="summary"></li>
+					<li id="add1"></li>
+					<li id="add2"></li>
+					<li id="add3"></li>
+				</ul>
+				<div id = "wuLogo">
+					<img src="images/wulogo_rev.png" alt="WunderGround Logo">
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			&copy;2017 Mariah Ashley &nbsp; <a href="https://mca39.github.io/index.html" title="Go to home page">Home</a>
+		</footer>
+
+<!--		<script src="modules.js"></script>-->
+		<script src="remote_wu.js"></script>
+		<script src="jquery-3.0.0.min.js"></script>
+
+	</body>
+
+</html>

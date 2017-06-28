@@ -44,13 +44,14 @@ body {
 	height: 100%;
 }
 
-main.franklin .overview {
+overview.franklin{
 	background-image: url("../images/sunny-winter.jpg");
 }
 
-main.greenville .overview {
+overview.greenville{
 	background-image: url("../images/thunderstorm.jpg");
 }
+
 
 main {
 	display: flex;
@@ -76,6 +77,7 @@ nav {
 	left: 0;
 	right: 0;
 	background-color: salmon;
+	font-size: 15px;
 }
 
 
@@ -142,18 +144,65 @@ nav a:active {
 }
 
 
+/*Current Location information on index.html*/
+
+
+.weather-container {
+	text-align: center;
+	background-color: rgb(85, 76, 168);
+	width: 100%;
+	color: bisque;
+	padding-top: .5em;
+	padding-bottom: 5.5em;
+}
+
+.weather-container h2 {
+	color: bisque;
+}
+
+.weather-container #currentTemp {
+	font-size: 30px;
+}
+
+.weather-container #cityDisplay {
+	font-size: 30px;
+}
+
+.weather-container ul {
+	list-style: none;
+}
+
+#add1 {
+	padding-top: .5em;
+}
+
+
 /*opaque box behind the overview section*/
 
 .overview {
 	margin: .2em auto;
 	border: 1px solid;
+	background-image: url(../images/sunny-winter.jpg);
 	border-radius: 5px;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	padding-top: 0;
 	flex-grow: 1;
+	text-align: center;
 }
 
+#overview_wrapper {
+		text-align-last: center;
+	/*opaque box around overview information*/
+
+	background-color: rgba(200, 200, 200, .6);
+	margin: .2em auto;
+	border: 1px solid;
+	border-radius: 5px;
+	width: 90%;
+	text-align: center;
+	color: rgb(8,48,69);
+}
 
 /*positions the sunny symbol and high/low*/
 
@@ -180,21 +229,26 @@ nav a:active {
 	padding: 0;
 }
 
-
-/*opaque box behind current conditions*/
-
-.curr_conditions {
-	/*	text-align-last: center;*/
-	/*opaque box around overview information*/
-	background-color: rgba(200, 200, 200, .6);
-	margin: .2em auto;
-	border: 1px solid;
-	border-radius: 5px;
-	width: 90%;
+.curr_conditions ul {
+	list-style: none;
 }
 
-.curr_conditions p span {
-	padding: 2px 3px;
+#wind_wrapper, #precip_wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#wind, #precip{
+	text-align: right;
+	width: 50%;
+	padding-right: 1em;
+}
+
+#windInfo, #precipInfo {
+	width: 50%;
+	text-align: left;
+	padding-left: 0;
 }
 
 
@@ -213,8 +267,7 @@ footer {
 	background-color: #b0d7dc;
 	line-height: 2.8em;
 	flex-grow: 1;
-	margin-bottom: 0;
-	padding-bottom: 0;
+	padding-bottom: 2em;
 }
 
 
@@ -230,7 +283,6 @@ h6 {
 	color: #083045;
 }
 
-
 /**************************************/
 
 
@@ -242,7 +294,7 @@ h6 {
 		flex-flow: wrap;
 		align-items: center;
 		background-color: rgba(200, 200, 200, .6);
-		background-image: none;
+/*		background-repeat:no-repeat;*/
 		align-items: stretch;
 		/*makes the blocks for main the same height*/
 	}
@@ -264,6 +316,23 @@ h6 {
 	nav li:first-child {
 		display: inline-flex;
 	}
+
+	main.franklin{
+		background-repeat: no-repeat;
+	}
+
+	main.greenville{
+		background-repeat: no-repeat;
+	}
+
+	.overview.franklin{
+		background-image: url("/weather/images/sunny-winter.jpg");
+	}
+
+	.overview.greenville{
+		background-image: url("/weather/images/thunderstorm.jpg");
+	}
+
 	/*format the overview section*/
 	.overview {
 		display: flex;
@@ -277,8 +346,8 @@ h6 {
 		flex-grow: 2;
 	}
 	/*opaque box behind the overview section info*/
-	.overview #overview_wrapper {
-		background-color: rgba(200, 200, 200, .6);
+	.#overview_wrapper {
+/*		background-color: rgba(200, 200, 200, .6);*/
 		margin: .2em auto;
 		border: 1px solid;
 		border-radius: 5px;
@@ -307,35 +376,7 @@ h6 {
 		margin: 0;
 		padding-top: 1em;
 	}
-	.wind_wrapper {
-		display: flex;
-		flex-direction: row;
-		align-items: baseline;
-		width: 80%;
-		padding-left: 0;
-	}
-	.wind_wrapper #wind {
-		display: flex;
-		justify-content: flex-end;
-		width: 50%;
-	}
-	.precip_wrapper {
-		display: flex;
-		flex-direction: row;
-		align-items: baseline;
-		width: 80%;
-	}
-	.precip_wrapper #precip {
-		display: flex;
-		justify-content: flex-end;
-		width: 62%;
-	}
-	.precip_wrapper #precipInfo {
-		display: flex;
-		flex-direction: row;
-		align-items: baseline;
-		width: 38%;
-	}
+
 	.hourly {
 		display: flex;
 		order: 3;
@@ -371,5 +412,38 @@ h6 {
 		line-height: 2.8em;
 		flex-grow: 1;
 		margin: 0;
+		padding-bottom: 0;
+	}
+	/*styles the index page*/
+	,weather-container h2 {
+		color: beige;
+		padding: 0;
+		margin: 0;
+	}
+
+	.weather-container{
+		display: flex;
+		flex-direction: column;
+
+		padding-bottom: 1em;
+	}
+	/*for index.html page*/
+	.weather-container #cityDisplay {
+		font-size: 40px;
+	}
+	.weather-container h2 {
+		font-size: 30px;
+	}
+	.weather-container #currentTemp {
+		font-size: 30px;
+	}
+	#summary {
+		padding: .26em;
+		font-size: 30px;
+	}
+	#add1,
+	#add2,
+	#add3 {
+		font-size: 20px;
 	}
 }
