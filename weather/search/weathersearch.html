@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang='en-us'>
+
+<head>
+	<meta charset="utf-8">
+	<title>Weather Search</title>
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-comaptible" content="ie-edge">
+	<link href="../css/screen.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<!-- *********************************************
+* Who Did You Collaborate With On This Activity?
+* 1. Trevor Wayman
+* 2. Ashley Offret
+* 3. Clarke Hawkinson
+* 4. Carlos
+* 5. Leo
+* 6. Ryan Call
+* ******************************************** -->
+
+<body>
+	<!--search form-->
+
+	<main id="weatherSearch">
+		<nav>
+			<ul>
+				<li>
+					<a href="https://mca39.github.io/index.html" title="Go to home page">Home</a>
+				</li>
+				<li>
+					<a href="../index.html" title="Current Location">Current</a>
+				</li>
+				<li>
+					<a href="../franklin.html" title="Franklin">Franklin</a></li>
+				<li>
+					<a href="../greenville.html" title="Greenville">Greenville</a>
+				</li>
+				<li>
+					<a href="#" title="Springville">Springville</a>
+				</li>
+				<li>
+					<a href="#" title="Search">Search</a>
+				</li>
+			</ul>
+		</nav>
+		<!--Seach bar-->
+		<form id="searchBar" method="get" action="//autocomplete.wunderground.com/aq" id="searchform">
+			<input type="search" name="query" id="query">
+			<input type="submit" name="submit" value="Search" id="send">
+		</form>
+		<!--Search results-->
+		<section id="searchResults"></section>
+		<section id="weatherResults">
+			<h1 id="cityDisplay"></h1>
+			<ul id="current_conditions">
+				<li id="currentTemp"></li>
+				<li id="summary"></li>
+				<li id="high"></li>
+				<li id="low"></li>
+			</ul>
+		</section>
+	</main>
+</body>
+<footer id="searchFooter">
+	&copy;2017 Mariah Ashley &nbsp;
+	<section>
+		<img src="../images/wulogo_rev.png" alt="Weatherunderground logo" title="All weather data provided by WeatherUnderground.com">
+	</section>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="scripts/weathersearch.js"></script>
+</footer>
+
+</html>
