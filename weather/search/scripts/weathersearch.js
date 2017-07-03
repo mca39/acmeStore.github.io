@@ -36,8 +36,8 @@ function getData(input) {
 			$("title").html(location + " | Weather Center");
 			$("#currentTemp").html(Math.round(temp_f) + '°');
 		 $("#summary").text(toTitleCase(data.current_observation.weather));
-			$("#high").text('High: ' + data.forecast.forecastday.high);
-			$("#low").text('Low: ' + data.forecast.forecastday.low);
+			$("#high").text('High: ' + Math.round(data.forecast.forecastday.high) + '°');
+			$("#low").text('Low: ' + Math.round(data.forecast.forecastday.low) + '°');
 			$("#cover").fadeOut(250);
 		}
 	});
