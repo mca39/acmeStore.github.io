@@ -451,4 +451,16 @@ h6 {
 	#add3 {
 		font-size: 20px;
 	}
+
+	/*style the search page*/
+	#weatherSearch{
+		padding-bottom: 505px;
+		color: darkblue;
+	}
+
+	#weatherResults{
+		font-size: 20px;
+		text-align: center;
+		padding-left: 100px;
+	}
 }

@@ -28,14 +28,17 @@ function getData(input) {
 		dataType: "jsonp",
 		success: function (data) {
 			console.log(data);
-			var location = data.location.city + ', ' + data.location.state;
+			var location = data.display_location.full;
 			var temp_f = data.current_observation.temp_f;
 			console.log('Location is: ' + location);
 			console.log('Temp is: ' + temp_f);
 			$("#cityDisplay").text(location);
 			$("title").html(location + " | Weather Center");
 			$("#currentTemp").html(Math.round(temp_f) + '°');
-			$("#summary").text(toTitleCase(data.current_observation.icon));
+		 $("#summary").text(toTitleCase(data.current_observation.weather));
+			$("#high").text(data.forecast.forecastday.high);
+			$("#low").text(data.forecast.forecastday.low);
+//			$("#high").text('High': + data.current_observation.icon);
 			$("#cover").fadeOut(250);
 		}
 	});
