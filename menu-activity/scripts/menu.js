@@ -27,7 +27,7 @@ $("#page-nav").on("click", "a", function (evt) {
 	var jsonCity = $(this).text(); // Franklin, etc...
 	console.log(jsonCity);
 	$.ajax({
-		url: "/menu-activity/scripts/weather.json",
+		url: "scripts/weather.json",
 		dataType: "json",
 		success: function (data) {
 			console.log(data);
