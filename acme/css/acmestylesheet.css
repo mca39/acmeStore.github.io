@@ -1,0 +1,195 @@
+/* This is  my main CSS file */
+
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market');
+* {
+	box-sizing: border-box;
+	/* changes width property
+	to total width instead of content width */
+}
+
+
+/*for mobile devices*/
+
+#acmeBody {
+	background-image: url(../images/site/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'Chelsea Market', cursive;
+	font-size: 20px;
+}
+
+#acmeMain {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+#pageHeader {
+	background-color: #ffffff;
+	align-content: center;
+	background-image: url(../images/site/logo.png);
+	height: 120px;
+	background-repeat: no-repeat;
+}
+
+#pageNav {
+	display: flex;
+	background-color: #de2226;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+#pageNav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+	list-style: none;
+	flex-grow: 1;
+	padding: 0;
+}
+
+#contentTitle {
+	padding-left: 10px;
+}
+
+#hero {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-start;
+	background-image: url(../images/site/feature_420.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #de2226;
+	padding-right: 7px;
+}
+
+#hero ul {
+	list-style: none;
+	font-size: 11px;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+
+#hero img {
+	width: 50%;
+	height: auto;
+}
+
+#infoWrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#featuredRecipies{
+	justify-content: center;
+}
+
+#featuredRecipies img {
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	padding-left: 50px;
+}
+#recipes1,
+#recipes2 {
+	display: flex;
+	justify-content: center;
+}
+#bbq,
+#potPie,
+#soup,
+#tacos {
+	width: 50%;
+}
+
+#rocketReviews ul {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#rocketReviews li {
+	padding-bottom: 10px;
+}
+
+#rocketReviews li:last-child {
+	padding-bottom: 0;
+}
+
+footer {
+	font-size: 12px;
+	text-align: center;
+	border-style: solid;
+	border-top: solid #000000;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+	background-color: #ffffff;
+}
+
+
+/**************************/
+
+
+/*for laptop screens*/
+
+@media only screen and (min-width: 750px) {
+	footer {
+		font-size: 30px;
+	}
+	#contentTitle {
+		font-size: 35px;
+	}
+	#pageNav {
+		font-size: 20px;
+	}
+	#hero {
+		flex-direction: row;
+		height: 480px;
+		justify-content: flex-end;
+		padding-right: 50px;
+		background-image: url(../images/site/feature.jpg);
+		background-size: cover;
+	}
+	#hero ul {
+		font-size: 40px;
+	}
+	#hero img {
+		width: 100%;
+		height: auto;
+	}
+	#infoWrapper {
+		display: flex;
+		flex-direction: row;
+	}
+	#featuredRecipies {
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+		width: 50%;
+		justify-content: space-around;
+	}
+	#recipes1,
+	#recipes2 {
+		display: flex;
+		flex-direction: row;
+	}
+	#bbq,
+	#potPie,
+	#soup,
+	#tacos {
+		width: 50%;
+	}
+	#featuredRecipies img {
+		width: 80%;
+		height: auto;
+	}
+	#rocketReviews {
+		width: 80%;
+	}
+}
