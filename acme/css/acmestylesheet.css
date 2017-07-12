@@ -179,10 +179,22 @@ p {
 	margin-bottom: 20px;
 }
 
+#made,
+#reviews {
+	font-weight: bold;
+	text-align: right;
+	padding-top: 15px;
+}
+
+#description {
+	padding-bottom: 15px;
+}
+
 #price {
 	color: red;
 	font-weight: bolder;
 	font-size: 22px;
+	padding-top: 15px;
 }
 
 footer {
@@ -273,17 +285,5 @@ footer {
 	}
 	#productInfo {
 		font-size: 35px;
-	}
-	#infoTable tr {
-		background-color: #ffffff;
-	}
-	#made,
-	#reviews {
-		font-weight: bold;
-		text-align: right;
-	}
-	#price {
-		font-size: 40px;
-		font-weight: bolder;
 	}
 }
