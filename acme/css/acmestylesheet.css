@@ -16,6 +16,7 @@
 	background-repeat: no-repeat;
 	font-family: 'Chelsea Market', cursive;
 	font-size: 20px;
+	width: 95%;
 }
 
 #acmeMain {
@@ -26,7 +27,7 @@
 
 #pageHeader {
 	background-color: #ffffff;
-	align-content: center;
+	background-size: contain;
 	background-image: url(../images/site/logo.png);
 	height: 120px;
 	background-repeat: no-repeat;
@@ -35,8 +36,6 @@
 #pageNav {
 	display: flex;
 	background-color: #de2226;
-	color: #ffffff;
-	font-size: 12px;
 }
 
 #pageNav ul {
@@ -49,8 +48,26 @@
 	padding: 0;
 }
 
+#pageNav a {
+	display: flex;
+	color: #ffffff;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#pageNav a:hover {
+	color: #0000ee;
+}
+
 #contentTitle {
 	padding-left: 10px;
+}
+
+#contentTitle h2 {
+	display: flex;
+	font-size: 25px;
+	font-weight: bolder;
 }
 
 #hero {
@@ -62,49 +79,47 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #de2226;
-	padding-right: 7px;
 }
 
 #hero ul {
 	list-style: none;
-	font-size: 11px;
-	text-align: right;
+	font-size: 12px;
 	padding: 0;
+	padding-left: 10px;
+	font-weight: bold;
 	margin: 0;
+	background-color: rgba(220, 220, 220, .6);
+	width: 55%;
 }
 
 #hero img {
-	width: 50%;
+	width: 70%;
 	height: auto;
 }
 
-#infoWrapper {
-	display: flex;
-	flex-direction: column;
+#featuredRecipies h2 {
 	text-align: center;
+	font-size: 20px;
 }
 
-#featuredRecipies{
-	justify-content: center;
+#recipies {
+	width: 100%;
+	font-size: 15px;
 }
 
-#featuredRecipies img {
-	height: auto;
-	display: flex;
-	flex-direction: row;
-	flex-grow: 1;
-	padding-left: 50px;
+#recipies th,
+td {
+	text-align: center;
+	vertical-align: middle;
 }
-#recipes1,
-#recipes2 {
-	display: flex;
-	justify-content: center;
+
+tr:nth-child(odd) {
+	background: rgb(200, 200, 200);
 }
-#bbq,
-#potPie,
-#soup,
-#tacos {
-	width: 50%;
+
+#rocketReviews h2 {
+	text-align: center;
+	font-size: 20px;
 }
 
 #rocketReviews ul {
@@ -115,10 +130,59 @@
 
 #rocketReviews li {
 	padding-bottom: 10px;
+	font-size: 20px;
 }
 
 #rocketReviews li:last-child {
 	padding-bottom: 0;
+}
+
+#contentTitle {
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+#productWrapper {
+	display: flex;
+	width: 100%;
+}
+
+#productImg {
+	width: 50%;
+}
+
+#productImg Img {
+	width: 100%;
+	height: auto;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+#productInfo {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	font-size: 15px;
+	padding-top: 15px;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+#madeBy {
+	margin-top: 20px;
+}
+
+#reviewScores {
+	margin-bottom: 20px;
+}
+
+#price {
+	color: red;
+	font-weight: bolder;
+	font-size: 22px;
 }
 
 footer {
@@ -142,25 +206,36 @@ footer {
 	footer {
 		font-size: 30px;
 	}
+	#acmeBody {
+		width: 98%
+	}
 	#contentTitle {
-		font-size: 35px;
+		font-size: 30px;
+		font-weight: bolder;
+		padding: 5px;
+		padding-left: 15px;
 	}
 	#pageNav {
+		font-size: 20px;
+	}
+	#pageNav a {
+		display: flex;
 		font-size: 20px;
 	}
 	#hero {
 		flex-direction: row;
 		height: 480px;
 		justify-content: flex-end;
-		padding-right: 50px;
 		background-image: url(../images/site/feature.jpg);
 		background-size: cover;
 	}
 	#hero ul {
 		font-size: 40px;
+		width: 55%;
+		height: 100%;
 	}
 	#hero img {
-		width: 100%;
+		width: 50%;
 		height: auto;
 	}
 	#infoWrapper {
@@ -168,28 +243,47 @@ footer {
 		flex-direction: row;
 	}
 	#featuredRecipies {
+		width: 50%;
 		display: flex;
 		flex-direction: column;
-		font-size: 20px;
-		width: 50%;
-		justify-content: space-around;
-	}
-	#recipes1,
-	#recipes2 {
-		display: flex;
-		flex-direction: row;
-	}
-	#bbq,
-	#potPie,
-	#soup,
-	#tacos {
-		width: 50%;
+		justify-content: center;
+		padding-left: 50px;
 	}
 	#featuredRecipies img {
-		width: 80%;
+		width: 40%;
 		height: auto;
 	}
+	#featuredRecipies a {
+		font-size: 20px;
+	}
 	#rocketReviews {
-		width: 80%;
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		justify-content: center;
+	}
+	#productImg {
+		display: flex;
+		justify-content: center;
+		padding-top: 15px;
+	}
+	#productImg img {
+		width: auto;
+		height: 70%;
+	}
+	#productInfo {
+		font-size: 35px;
+	}
+	#infoTable tr {
+		background-color: #ffffff;
+	}
+	#made,
+	#reviews {
+		font-weight: bold;
+		text-align: right;
+	}
+	#price {
+		font-size: 40px;
+		font-weight: bolder;
 	}
 }

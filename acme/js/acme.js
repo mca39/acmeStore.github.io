@@ -1,6 +1,7 @@
 //when the document is ready and done loading, call the getData function
-$(document).ready(function(){
+$(document).ready(function () {
 	getData();
+	$('#productWrapper').hide();
 });
 
 function getData() {
@@ -10,39 +11,50 @@ function getData() {
 		success: function (data) {
 			console.log(data);
 			//fill the empty list items in the html with the navigation link names in the JSON Navigation object
-			$("#li1").text(data.Navigation.link1);
-			$("#li2").text(data.Navigation.link2);
-			$("#li3").text(data.Navigation.link3);
-			$("#li4").text(data.Navigation.link4);
-			$("#li5").text(data.Navigation.link5);
+			$("#li1").html(data.Navigation.link1);
+			$("#li2").html(data.Navigation.link2);
+			$("#li3").html(data.Navigation.link3);
+			$("#li4").html(data.Navigation.link4);
+			$("#li5").html(data.Navigation.link5);
 		}
 	});
 }
 
-//// Intercept the menu link clicks
-//$("#pageNav").on("click", "a", function () {
-//	//get the link (object)that was clicked on
-//	var currentPage = ;
-//	var linkName =  $(this); //.text();
-//	console.log(linkName);
-//	//Replace the contents of home
-//	$("pageNav").click(function(){
-//		if(currentPage = home){
-//			//hide content of home
-//			$("hero").hide();
-//			$("featuredRecipes").hide();
-//			$("rocketReviews").hide();
-//			//insert info and images for linkName here:
-//
-//		}
-//		else{
-////this is for the product image: $(currentPage.name).replaceWith(linkName.name);
-//		$(currentPage.name).replaceWith(linkName.name);
-//		$(currentPage.path).replaceWith(linkName.path);
-//		$(currentPage.description).replaceWith(linkName.description);
-//		$(currentPage.manufacturer).replaceWith(linkName.manufacturer);
-//		$(currentPage.price).replaceWith(linkName.price);
-//		$(currentPage.reviews).replaceWith(linkName.reviews);
-//		}
-//	});
-//});
+// Intercept the menu link clicks
+$("#pageNav").on("click", "a", function (evt) {
+	// Intercept the menu link clicks
+	evt.preventDefault();
+	//get the link that was clicked on
+	var link = $(this).text();
+	console.log(link);
+
+	//hide home page and show the product page
+	if (link != 'Home') {
+		$('#homepageWrapper').hide();
+		$('#productWrapper').show();
+
+	$.ajax({
+		url: "js/acme.json",
+		dataType: "json",
+		success: function (data) {
+			console.log(data);
+			//find the path to the +product .png
+			var picPath=(data[link].path);
+			console.log(picPath);
+			//insert the product content
+			$('#contentTitle').text(data[link].name);
+			$("#productImg").html("<img src='" + picPath + "'>");
+			$('#description').text(data[link].description);
+			$('#madeBy').text(' ' + data[link].manufacturer);
+			$('#reviewScores').text(data[link].reviews + '/5 stars');
+			$('#price').text('Price: $' + data[link].price);
+		}
+	});
+	}
+	else{
+		$('#homepageWrapper').show();
+		$('#productWrapper').hide();
+		$('#contentTitle').text("Welcome to Acme!");
+
+	}
+});

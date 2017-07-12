@@ -13,71 +13,121 @@
 	<header id="pageHeader"></header>
 	<nav id="pageNav">
 		<ul>
-			<li id="li1"></li>
-			<li id="li2"></li>
-			<li id="li3"></li>
-			<li id="li4"></li>
-			<li id="li5"></li>
+			<li>
+				<a href="#" id="li1"></a>
+			</li>
+			<li>
+				<a href="#" id="li2"></a>
+			</li>
+			<li>
+				<a href="#" id="li3"></a>
+			</li>
+			<li id>
+				<a href="#" id="li4"></a>
+			</li>
+			<li>
+				<a href="#" id="li5"></a>
+			</li>
 		</ul>
 	</nav>
+
 	<main id="acmeMain">
 		<section id="contentTitle">
-			<h2>Welcome to Acme!</h2>
+			<h2 id>Welcome to Acme!</h2>
 		</section>
-		<section id="hero">
-			<ul>
-				<li>
-					<h2>Acme Rocket</h2>
-				</li>
-				<li>Quick lighting fuse</li>
-				<li>NHTSA approved seat belts</li>
-				<li>Mobile launch stand included</li>
-				<li>
-					<a href="#"><img id="actionbtn" alt="Add to cart button" src="images/site/iwantit.gif"></a>
-				</li>
-			</ul>
-		</section>
-
-		<section id="infoWrapper">
-
-			<div id="featuredRecipies">
-				<h2>Featured Recipies</h2>
-
-				<div id="recipes1">
-					<div id=bbq>
-						<img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ Sandwhich">
-						<p><a href="#">Pulled Roadrunner BBQ</a></p>
-					</div>
-					<div id="potPie">
-						<img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
-						<p><a href="#">Roadrunner Pot Pie</a></p>
-					</div>
-				</div>
-
-				<div id="recipes2">
-
-					<div id="soup"> <img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
-						<p><a href="#">Roadrunner Soup</a></p>
-					</div>
-
-					<div id="tacos">
-						<img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
-						<p><a href="#">Roadrunner Tacos</a></p>
-					</div>
-				</div>
-			</div>
-
-			<div id="rocketReviews">
-				<h2>Acme Rocket Reviews</h2>
+		<!-----build the home page --------------------------->
+		<class id="homepageWrapper">
+			<section id="hero">
 				<ul>
-					<li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
-					<li>"That thing was fast!" (4/5)</li>
-					<li>"Talk about fast delivery." (5/5)</li>
-					<li>"I didn't even have to pull the meat apart." (4.5/5)</li>
-					<li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+					<li>
+						<h2>Acme Rocket</h2>
+					</li>
+					<li>Quick lighting fuse</li>
+					<li>NHTSA approved seat belts</li>
+					<li>Mobile launch stand included</li>
+					<li>
+						<a href="#"><img id="actionbtn" alt="Add to cart button" src="images/site/iwantit.gif"></a>
+					</li>
 				</ul>
-			</div>
+			</section>
+
+			<section id="infoWrapper">
+				<section id="featuredRecipies">
+
+					<h2>Featured Recipies</h2>
+
+					<table id="recipies">
+						<tr>
+							<td>
+								<img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ Sandwhich">
+
+							</td>
+							<td>
+								<img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
+
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a href="#">Pulled Roadrunner BBQ</a>
+							</td>
+							<td>
+								<a href="#">Roadrunner Pot Pie</a>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
+							</td>
+							<td>
+								<img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<a href="#">Roadrunner Soup</a>
+							</td>
+							<td>
+								<a href="#">Roadrunner Tacos</a>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+				<section id="rocketReviews">
+					<h2>Acme Rocket Reviews</h2>
+					<ul>
+						<li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
+						<li>"That thing was fast!" (4/5)</li>
+						<li>"Talk about fast delivery." (5/5)</li>
+						<li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+						<li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+					</ul>
+				</section>
+			</section>
+		</class>
+		<!------build the product pages------------------------>
+		<section id="productWrapper">
+			<section id="productImg"></section>
+			<section id="productInfo">
+				<p id="description"></p>
+				<table id="infoTable">
+					<tr>
+						<td id="made">Made by:</td>
+						<td id="madeBy"></td>
+					</tr>
+					<tr>
+						<td id="reviews">Reviews:</td>
+						<td id="reviewScores"></td>
+					</tr>
+				</table>
+				<section id="price"></section>
+			</section>
 		</section>
+
+
 	</main>
 	<footer>
 		&copy; 2017 Mariah Ashley, All rights Reserved
