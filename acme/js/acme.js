@@ -41,18 +41,27 @@ $("#pageNav").on("click", "a", function (evt) {
 			//find the path to the +product .png
 			var picPath=(data[link].path);
 			console.log(picPath);
+			/*change the title in the browser tab*/
+			$('title').replaceWith("<title>" + link + ' | Acme' + "'</title>");
 			//insert the product content
 			$('#contentTitle').text(data[link].name);
+			/*insert the path for product images*/
 			$("#productImg").html("<img src='" + picPath + "'>");
+			/*product info*/
 			$('#description').text(data[link].description);
 			$('#madeBy').text(' ' + data[link].manufacturer);
 			$('#reviewScores').text(data[link].reviews + '/5 stars');
 			$('#price').text('Price: $' + data[link].price);
+
 		}
 	});
 	}
 	else{
+		/*title in the tab*/
+		$('title').replaceWith("<title>" + 'Home | Acme' + "'</title>");
+		/*show the home page section*/
 		$('#homepageWrapper').show();
+		/*hide the product page section*/
 		$('#productWrapper').hide();
 		$('#contentTitle').text("Welcome to Acme!");
 

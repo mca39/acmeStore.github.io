@@ -22,7 +22,7 @@
 #acmeMain {
 	display: flex;
 	flex-direction: column;
-	background-color: #ffffff;
+	background-color: rgba(255, 255, 255, 0.08);
 }
 
 #pageHeader {
@@ -42,18 +42,16 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: stretch;
 	list-style: none;
 	flex-grow: 1;
 	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
 }
 
 #pageNav a {
-	display: flex;
 	color: #ffffff;
-	font-size: 12px;
 	text-decoration: none;
-	font-weight: bold;
 }
 
 #pageNav a:hover {
@@ -92,6 +90,7 @@
 	width: 55%;
 }
 
+/*resize the button on the hero*/
 #hero img {
 	width: 70%;
 	height: auto;
