@@ -22,7 +22,7 @@
 #acmeMain {
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(255, 255, 255, 0.08);
+	background-color: rgba(255, 255, 255, 0.4);
 }
 
 #pageHeader {
@@ -60,9 +60,6 @@
 
 #contentTitle {
 	padding-left: 10px;
-}
-
-#contentTitle h2 {
 	display: flex;
 	font-size: 25px;
 	font-weight: bolder;
@@ -273,6 +270,9 @@ footer {
 		width: 50%;
 		justify-content: center;
 	}
+	#contentTitle{
+		background-color: rgba(255, 255, 255, 0.4);
+	}
 	#productImg {
 		display: flex;
 		justify-content: center;
@@ -283,6 +283,10 @@ footer {
 		height: 70%;
 	}
 	#productInfo {
+		font-size: 35px;
+	}
+
+	#price{
 		font-size: 35px;
 	}
 }

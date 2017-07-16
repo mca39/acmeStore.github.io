@@ -46,7 +46,7 @@ $("#pageNav").on("click", "a", function (evt) {
 			//insert the product content
 			$('#contentTitle').text(data[link].name);
 			/*insert the path for product images*/
-			$("#productImg").html("<img src='" + picPath + "'>");
+			$("#productImg").html("<img src='" + picPath + "'alt=' + link + '>");
 			/*product info*/
 			$('#description').text(data[link].description);
 			$('#madeBy').text(' ' + data[link].manufacturer);
