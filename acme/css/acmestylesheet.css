@@ -22,7 +22,7 @@
 #acmeMain {
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
 #pageHeader {
@@ -270,7 +270,7 @@ footer {
 		justify-content: center;
 	}
 	#contentTitle{
-		background-color: rgba(255, 255, 255, 0.4);
+		background-color: rgba(255, 255, 255);
 	}
 	#productImg {
 		display: flex;
