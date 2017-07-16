@@ -16,7 +16,7 @@
 	background-repeat: no-repeat;
 	font-family: 'Chelsea Market', cursive;
 	font-size: 20px;
-	width: 95%;
+	width: 90%;
 }
 
 #acmeMain {
@@ -103,7 +103,7 @@
 	font-size: 15px;
 }
 
-#recipies th,
+#recipies /*th*/,
 td {
 	text-align: center;
 	vertical-align: middle;
@@ -219,7 +219,6 @@ footer {
 	}
 	#contentTitle {
 		font-size: 30px;
-		font-weight: bolder;
 		padding: 5px;
 		padding-left: 15px;
 	}
